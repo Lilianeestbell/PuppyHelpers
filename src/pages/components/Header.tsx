@@ -17,7 +17,10 @@ const Wrapper =  styled.div`
     .site-layout .site-layout-background {
         background: #fff;
     }
-    width: 1024px;
+    width: 100%;
+   /* .ant-menu-overflow .ant-menu .ant-menu-root .ant-menu-horizontal .ant-menu-light{
+      margin: 0px auto;
+   } */
 `
 
 const MainHeader: FC = () =>{
