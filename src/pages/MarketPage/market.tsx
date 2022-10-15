@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect}  from 'react'
+import React, { FC, useState }  from 'react'
 import styled from 'styled-components'
 import { fakeData } from './config'
 
@@ -7,6 +7,7 @@ const Wrapper =  styled.div`
     margin: 10px auto;
     padding-bottom: 50px;
 `
+
 const ItemWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -34,13 +35,11 @@ const ItemInfoBox = styled.div`
     height: 400px;
 `
 
-const PuppyList : FC = () => {
-    const [list, setList] = useState<Record<string, any>>([]);
-    useEffect(() => {
-        setList(fakeData)
-    }, [])
+const MarketList : FC = () => {
+    const [list, setList] = useState<Record<string, any>>(fakeData);
     return (
         <Wrapper>
+           {/* <MainHeader/> */}
             <ItemWrapper>
                 {
                     list.map( (item:any) => (
@@ -76,4 +75,4 @@ const PuppyList : FC = () => {
     )
 }
 
-export default PuppyList
+export default MarketList
