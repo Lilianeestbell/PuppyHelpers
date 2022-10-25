@@ -6,16 +6,19 @@ import './App.css';
 import MainHeader from './pages/components/Header';
 import PuppyList from './pages/MainPage';
 import MarketList from './pages/MarketPage';
+import SignupPage from './pages/SignPage/signup/SignupPage';
+import LoginPage from './pages/SignPage/loginIn/loginPage';
 
 function App() {
   return (
     <React.StrictMode>
       <ConfigProvider>
           <BrowserRouter>
-            <MainHeader/>
             <Routes>
-              <Route path="/business" element={<MarketList />} /> 
-              <Route path="/home" element={<PuppyList />} /> 
+              <Route path="/business" element={<div><MainHeader/><MarketList /></div>} /> 
+              <Route path="/home" element={<div><MainHeader/><PuppyList /></div>} /> 
+              <Route path="/signup" element={<SignupPage />} /> 
+              <Route path="/login" element={<LoginPage />} /> 
             </Routes>
           </BrowserRouter>
       </ConfigProvider>
